@@ -6,6 +6,11 @@ export const parentDiv = {
     padding: "2px",
     boxSizing: "border-box",
 };
+export const leafletMapStyle = {
+    height: "80vh",
+     margin: "10px", 
+     position: "relative"
+}
 
 export const header = {
     backgroundColor: "cyan",
