@@ -9,11 +9,11 @@ import {
 import "leaflet/dist/leaflet.css";
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import { Icon } from "leaflet";
-import { clickedLocationDiv, header, parentDiv } from "../styles/leafletStyle";
+import { clickedLocationDiv, header, leafletMapStyle, parentDiv } from "../styles/leafletStyle";
 
 
 
-const leaflet = { height: "80vh", margin: "10px", position: "relative" }
+
 const dummyPointData = [
     { id: 1, lat: 23.505, lng: 86.309, name: "Ranchi" },
     { id: 2, lat: 28.51, lng: 77.111, name: "Delhi" },
@@ -70,13 +70,14 @@ const MapContainer = () => {
             <div
                 style={header}
             >
-                <h1> React Map</h1>
+                <h1> React Map </h1>
             </div>
             <LeafletMap
                 center={[20.244, 78.309]}
                 zoom={5}
                 scrollWheelZoom={true}
                 onClick={handleMapClick}
+                style={leafletMapStyle}
             >
                 <TileLayer
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
